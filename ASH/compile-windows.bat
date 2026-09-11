@@ -1,1 +1,2 @@
-gcc "C:/User/%USERNAME%/" -o main.exe
+cd src
+g++ -o main.cpp -o main.exe
