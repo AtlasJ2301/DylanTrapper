@@ -1,0 +1,1 @@
+gcc "C:/User/%USERNAME%/" -o main.exe
