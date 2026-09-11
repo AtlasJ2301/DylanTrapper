@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if ! [[ -d "./build" ]]; then
-  mkdir -p ./build
+if g++ ./src/main.cpp -o ./build/ash; then
+  if ! [[ -d "./build" ]]; then
+    mkdir -p ./build
+  fi
 fi
-
-g++ ./src/main.cpp -o ./build/ash

@@ -1,20 +1,19 @@
-#include "as/standard"
 #include <iostream>
+#include <string>
+#include <filesystem>
 
-int process(char* inputcmd) {
-  as::string cmd;
+int process(std::string cmd) {
 
-  cmd.set(inputcmd);
-  if (cmd.cmp({"testing"})) as::printf("Working");
-  return "";
+  if (cmd == "exit") return 100;
+  return 0;
 }
 
 int main() {
-  char input[50];
+  std::string input;
 
-  while (input != "exit") {
+  while (1) {
     std::cout << "> ";
     std::cin >> input;
-    process(input);
+    if (process(input) == 100) break;
   }
 }
